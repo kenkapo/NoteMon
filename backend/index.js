@@ -4,7 +4,7 @@ const port = 8080;
 import AuthRouter from "./routes/Auth.js";
 import NoteRouter from "./routes/Notes.js";
 import mongoose from 'mongoose';
-import cors from "cors";
+import cors from "cors"; 
 import path from "path";
 import dotenv from "dotenv";
 dotenv.config(); 

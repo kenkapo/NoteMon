@@ -127,7 +127,7 @@ export const sendNotes = (req, res) => {
 `;
 
   let message = {
-    from: { name: "NoteMon", address: EMAIL },
+    from: { name: "NoteMon", address: process.env.EMAIL },
     to: email,
     subject: `Note #${id}`,
     html: htmlContent
