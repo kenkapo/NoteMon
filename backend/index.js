@@ -20,13 +20,7 @@ async function main() {
   console.log("database connected");
 }
 const __dirname=path.resolve();
-const above=path.resolve(__dirname,"..")
-console.log(__dirname);
-console.log(above);
-app.use(express.static(path.join(above,"/frontend/build")));
-app.get("*",(req,res)=>{
-  res.sendFile(path.resolve(above,"frontend","build","index.html"));
-})
+app.use(express.static(path.join(__dirname,"/frontend/build")));
 app.use("/user",AuthRouter.router);
 app.use("/note",NoteRouter.router);
 
