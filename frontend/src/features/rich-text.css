@@ -1,0 +1,84 @@
+/* Styles for h1 */
+h1 {
+    font-size: 2em; /* Adjust the font size */
+    font-weight: bold; /* Make the text bold */
+    
+  }
+  
+  /* Styles for h2 */
+  h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    
+    /* Add any other styles you want */
+  }
+  
+  /* Styles for h3 */
+  h3 {
+    font-size: 1.17em;
+    font-weight: bold;
+    
+    /* Add any other styles you want */
+  }
+  
+  /* Styles for h4 */
+  h4 {
+    font-size: 1em;
+    font-weight: bold;
+    
+    /* Add any other styles you want */
+  }
+  
+  /* Styles for h5 */
+  h5 {
+    font-size: 0.83em;
+    font-weight: bold;
+    
+    /* Add any other styles you want */
+  }
+  
+  /* Styles for h6 */
+  h6 {
+    font-size: 0.67em;
+    font-weight: bold;
+   
+    /* Add any other styles you want */
+  }
+
+  /* Styles for paragraphs */
+p {
+    font-size: 16px; 
+    line-height: 1.5; 
+  
+  }
+
+  
+a {
+    color: #0074d9;
+    text-decoration: none; 
+    transition: color 0.3s ease;
+  }
+
+  
+  
+  li
+  {
+    font-size: 16px; 
+    line-height: 1.5; 
+  }
+
+
+  /* Style the container */
+.container {
+  overflow-y: auto;
+  
+}
+ 
+.ql-editor
+{
+  min-height: 180px;
+  max-height: 300px;
+}
+
+
+
