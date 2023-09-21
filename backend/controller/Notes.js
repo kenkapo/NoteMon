@@ -1,5 +1,4 @@
 import { Note } from "../model/Note.js";
-import { EMAIL,PASSWORD } from "../env.js";
 import nodemailer from 'nodemailer';
 import dotenv from "dotenv"
 dotenv.config();
