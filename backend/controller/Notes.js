@@ -1,5 +1,5 @@
 import { Note } from "../model/Note.js";
-import { EMAIL,PASSWORD } from "../env.js";
+import { EMAIL,PASSWORD } from "../../env.js";
 import nodemailer from 'nodemailer';
 
 export const createNote = async (req, res) => {
@@ -68,7 +68,7 @@ export const searchNotes = async (req, res) => {
       res.status(200).json(docs);
     } catch (err) {
       res.status(404).json(err);
-    }
+    } 
   }
 
 };
@@ -83,8 +83,8 @@ export const sendNotes = (req, res) => {
   let config = {
     service: 'gmail',
     auth: {
-      user: EMAIL,
-      pass: PASSWORD
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD
     }
   }
 
