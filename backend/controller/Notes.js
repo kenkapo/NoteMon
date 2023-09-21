@@ -1,7 +1,8 @@
 import { Note } from "../model/Note.js";
-import { EMAIL,PASSWORD } from "../../env.js";
+import { EMAIL,PASSWORD } from "../env.js";
 import nodemailer from 'nodemailer';
-
+import dotenv from "dotenv"
+dotenv.config();
 export const createNote = async (req, res) => {
   const note = new Note(req.body);
   try {

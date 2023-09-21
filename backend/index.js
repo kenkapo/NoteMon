@@ -6,9 +6,9 @@ import NoteRouter from "./routes/Notes.js";
 import mongoose from 'mongoose';
 import cors from "cors";
 import path from "path";
-import {mongolink} from "../env.js"; 
-const __dirname=path.resolve();
-app.use(express.static(path.join(__dirname,"/frontend/build")));
+import dotenv from "dotenv";
+dotenv.config(); 
+
 app.use(cors());
 
 app.use(express.json());
@@ -16,10 +16,17 @@ app.use(express.json());
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect(mongolink);
+  await mongoose.connect(process.env.mongolink);
   console.log("database connected");
 }
-
+const __dirname=path.resolve();
+const above=path.resolve(__dirname,"..")
+console.log(__dirname);
+console.log(above);
+app.use(express.static(path.join(above,"/frontend/build")));
+app.get("*",(req,res)=>{
+  res.sendFile(path.resolve(above,"frontend","build","index.html"));
+})
 app.use("/user",AuthRouter.router);
 app.use("/note",NoteRouter.router);
 
